@@ -6,4 +6,6 @@
     self.cliente= cliente
 def imprimirDetallesCuenta(persona):
 def retirar():
+    pass
 def depositar():
+    pass
