@@ -4,12 +4,15 @@ from Cuenta import Cuenta
 class Main: 
     pass
 class mensajeBienvenida(): 
-    def _init_():
+    def _init_(self):
         pass
-    def darBienvenida(): 
+    def darBienvenida(self): 
         print("Hola")
-mensajeBienvenida.darBienvenida()
+        
+mensaje = mensajeBienvenida()
+mensaje.darBienvenida()
 
-Maria = Cliente("Maria", "Iztapalapa 11", 18)
-imprimirDetalles(Maria)
-cuenta1 = Cuenta(250, "debito", "Maria")
+Cliente1 = Cliente("Maria", "Iztapalapa 11", 18)
+imprimirDetalles(cliente1)
+Cuenta1 = Cuenta(250, "debito", "Maria")
+
