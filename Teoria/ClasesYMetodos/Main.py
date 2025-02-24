@@ -4,7 +4,7 @@ from Cuenta import Cuenta
 class Main: 
     pass
 class mensajeBienvenida(): 
-    def _init_(self):
+    def __init__(self):
         pass
     def darBienvenida(self): 
         print("Hola")
