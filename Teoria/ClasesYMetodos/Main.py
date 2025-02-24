@@ -1,5 +1,5 @@
-from Cliente import *
-from Cuenta import *
+from Cliente import Cliente
+from Cuenta import Cuenta
 
 class Main: 
     pass
