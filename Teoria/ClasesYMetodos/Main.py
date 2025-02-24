@@ -12,4 +12,4 @@ mensajeBienvenida.darBienvenida()
 
 Juan = Cliente("Maria", "Iztapalapa 11", 18)
 imprimirDetalles(Juan)
-cuenta1 = Cuenta(250,"debito", "Juan")
+cuenta1 = Cuenta(250, "debito", "Juan")
