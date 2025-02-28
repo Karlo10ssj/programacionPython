@@ -1,3 +1,0 @@
-#Author: Antonio Karlo Hernandez Pachecano
-class Menu: 
-    def __init__(self, darBienvenida, 
