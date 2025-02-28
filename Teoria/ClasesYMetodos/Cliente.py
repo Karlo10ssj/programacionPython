@@ -1,4 +1,4 @@
-author: Antonio Karlo Hernandez Pachecano
+#Author: Antonio Karlo Hernandez Pachecano
 class Cliente: 
     def __init__(self, nombre, direccion, edad):
         self.nombre = nombre
