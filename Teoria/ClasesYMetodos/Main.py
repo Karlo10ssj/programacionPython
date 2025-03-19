@@ -1,19 +1,11 @@
 #Author: Antonio Karlo Hernandez Pachecano
 from Cliente import Cliente
 from Cuenta import Cuenta
+from Menu import Menu
 
-class Main: 
-    pass
-class mensajeBienvenida(): 
-    def __init__(self):
-        pass
-    def darBienvenida(self): 
-        print("Hola")
-        
-mensaje = mensajeBienvenida()
-mensaje.darBienvenida()
+cliente1 = Cliente("Maria", "Iztapalapa 11", 25)
+cuenta1 = Cuenta(1000, "debito", cliente1.nombre)  # Acceso directo al atributo público
 
-Cliente1 = Cliente("Maria", "Iztapalapa 11", 18)
-imprimirDetalles(cliente1)
-Cuenta1 = Cuenta(250, "debito", "Maria")
-
+# Crear instancia de Menu y mostrar el menú
+menu = Menu(cliente1, cuenta1)
+menu.mostrar()
