@@ -7,8 +7,20 @@
     def imprimirDetallesCuenta(self):
         print("Saldo:", self.saldo, "Tipo:", self.tipo, "Propietario:", self.propietario)
 
-    def retirar(self):
-        pass
+    def retirar(self, cantidad):
+        if cantidad > 0 and cantidad <= self.saldo:
+            self.saldo -= cantidad
+            print(f"Retiro exitoso. Saldo restante: {self.saldo}")
+            return True
+        else:
+            print("Fondos insuficientes o cantidad inválida.")
+            return False
 
-    def depositar(self):
-        pass
+    def depositar(self, cantidad):
+        if cantidad > 0:
+            self.saldo += cantidad
+print(f"Depósito exitoso. Saldo actual: {self.saldo}")
+            return True
+        else:
+            print("Cantidad inválida.")
+            return False
