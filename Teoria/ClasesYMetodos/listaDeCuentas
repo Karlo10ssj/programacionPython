@@ -1,1 +1,60 @@
+# Archivo: Cliente.py
+# Autor: [Hernández Pachecano Antonio Karlo ]
+# Fecha: [5/04/25]
 
+class Cliente:
+    """Representa a un cliente del banco con sus cuentas asociadas."""
+    
+    def __init__(self, nombre, id_cliente):
+        self.nombre = nombre
+        self.id = id_cliente  
+        self.mis_cuentas = []  
+
+    def __str__(self):
+        return f"{self.nombre} (ID: {self.id})"
+
+    def agregar_cuenta(self, nueva_cuenta):
+        """Añade una cuenta a la lista del cliente"""
+        if nueva_cuenta not in self.mis_cuentas:
+            self.mis_cuentas.append(nueva_cuenta)
+            return True
+        return False
+
+    def quitar_cuenta(self, numero_cuenta):
+        """Elimina una cuenta específica"""
+        for cuenta in self.mis_cuentas:
+            if cuenta.numero == numero_cuenta:
+                self.mis_cuentas.remove(cuenta)
+                return True
+        print(f"⚠️ No se encontró la cuenta {numero_cuenta}")
+        return False
+
+    def listar_cuentas(self):
+        """Devuelve info resumida de todas las cuentas"""
+        return [f"• {cuenta}" for cuenta in self.mis_cuentas]
+
+
+class Cuenta:
+    """Representa una cuenta bancaria básica."""
+    
+    def __init__(self, numero, saldo_inicial=0):
+        self.numero = numero  # Número de cuenta
+        self.saldo = saldo_inicial
+
+    def __str__(self):
+        return f"Cuenta #{self.numero} - Saldo: ${self.saldo:.2f}"
+
+
+# --- Zona de pruebas (borrar después) ---
+if __name__ == "__main__":
+    # Ejemplo rápido de uso
+    cliente_ejemplo = Cliente("Maria", "11222333")
+    cuenta_1 = Cuenta("001", 1500)
+    cuenta_2 = Cuenta("002", 3200.50)
+
+    cliente_ejemplo.agregar_cuenta(cuenta_1)
+    cliente_ejemplo.agregar_cuenta(cuenta_2)
+
+    print(cliente_ejemplo)
+    for cuenta in cliente_ejemplo.listar_cuentas():
+        print(cuenta)
